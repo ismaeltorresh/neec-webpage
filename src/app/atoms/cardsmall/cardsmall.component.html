@@ -1,0 +1,11 @@
+<div class="cursor-pointer ease-in flex h-full hover:shadow-md hover:-translate-y-2 p-4 text-white transform transition-all w-full">
+  <div class="m-2">
+    <span class="material-symbols-outlined text-4xl text-primary-light">
+      <ng-content select="[icon]"></ng-content>
+    </span>
+  </div>
+  <div>
+    <h2 class="font-medium text-md"><ng-content select="[title]"></ng-content></h2>
+    <p class="text-sm"><ng-content select="[description]"></ng-content></p>
+  </div>
+</div>

@@ -1,0 +1,261 @@
+<app-contact></app-contact>
+<app-navigate></app-navigate>
+<app-banner [background]="'bg-ing'">
+  <div content class="w-full md:w-1/3 flex flex-col gap-16">
+    <div class="font-extrabold text-4xl">
+      <span class="text-cosmo">COSMOBIT</span> Tu socio confiable en soluciones informáticas
+    </div>
+    <div>
+      Nos dedicamos a impulsar el éxito digital de tu empresa. Desde soporte a equipos IBM hasta servicios en la nube, estamos aquí para transformar tus desafíos tecnológicos en oportunidades de crecimiento.
+    </div>
+    <div>
+      <button (click)="scrollToSection('contact')" class="px-8 py-4 bg-primary-light text-white rounded-sm flex-none">
+        Contáctanos
+      </button>
+    </div>
+  </div>
+</app-banner>
+<div class="flex gap-4 bg-coolgray-dark w-full overflow-x-auto py-4">
+  <app-cardsmall (click)="scrollToSection(solution.id)" *ngFor="let solution of solutionsMe" class="min-w-72 md:w-1/4">
+    <span icon>{{solution.icon}}</span>
+    <span title>{{solution.name}}</span>
+    <span description>{{solution.description}}</span>
+  </app-cardsmall>
+</div>
+<app-content01 [section]="'Soporte IBM'" [image]="'bg-servers'" class="w-full flex flex-col gap-8 px-8 py-16 md:flex-row text-coolgray-dark" id="ibmSupport">
+  <span comment>
+    Los mainframes IBM son la base inquebrantable de tu negocio, ofreciendo una fiabilidad y seguridad incomparables.
+  </span>
+  <span detail>
+    <h2 class="text-3xl font-bold">
+      ¿Tu IBM iSeries/AS400 está trabajando al máximo de su capacidad?
+    </h2>
+    <p class="mt-4 mb-4">
+      Sabemos que tu sistema IBM iSeries/AS400 es fundamental para el éxito de tu negocio. Un mantenimiento inadecuado puede provocar problemas de rendimiento, pérdida de datos y costosas interrupciones.
+    </p>
+    <p class="mt-4 mb-4">
+      Nuestros expertos en IBM iSeries/AS400 te ayudarán a:
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <div class="bg-secondary-medium text-white md:w-1/3 p-4 rounded-sm shadow-gray-200 shadow-md">
+        <span class="font-bold">Optimizar el rendimiento:</span> Acelera tus procesos y reduce los tiempos de respuesta.
+      </div>
+      <div class="md:w-1/3 p-4 rounded-sm shadow-gray-200 shadow-md">
+        <span class="font-bold">Mejorar la seguridad:</span> Protege tus datos de ciberataques y cumple con las normativas de la industria.
+      </div>
+      <div class="bg-secondary-medium text-white md:w-1/3 p-4 rounded-sm shadow-gray-200 shadow-md">
+        <span class="font-bold">Prolongar la vida útil de tu sistema:</span> Realiza actualizaciones y mejoras para mantener tu sistema actualizado y eficiente.
+      </div>
+      <div class="md:w-1/3 p-4 rounded-sm shadow-gray-200 shadow-md">
+        <span class="font-bold">Reducir costos:</span> Optimiza tus recursos y evita gastos innecesarios.
+      </div>
+    </div>
+  </span>
+</app-content01>
+<app-content01 [section]="'Licenciamiento de Software'" [image]="'bg-licencias'" [order]="'order-0'" class="w-full flex flex-col gap-8 p-8 py-16 md:flex-row bg-slate-200 text-coolgray-dark" id="license">
+  <span comment>
+    Las licencias obsoletas exponen tu empresa a riesgos de seguridad y pueden limitar tu crecimiento. ¡Actualiza ahora y aprovecha las últimas funcionalidades!
+  </span>
+  <span detail>
+    <h2 class="text-3xl font-bold">
+      ¿Buscas las licencias de software adecuadas?
+    </h2>
+    <p class="mt-4 mb-4">
+      ¡Déjanos ayudarte! Somos expertos en la venta de licencias de software de las mejores marcas. Te ofrecemos un servicio personalizado y te asesoramos para que adquieras las soluciones que mejor se adapten a tus necesidades.    </p>
+    <p class="mt-4 mb-4">
+      ¿Por qué elegirnos?
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex gap-4">
+        <div class="w-1/4 text-right text-3xl font-bold text-secondary-medium">
+          1
+        </div>
+        <div class="w-3/4 p-4 rounded-sm shadow-gray-200 shadow-md bg-secondary-medium text-white">
+          Amplio catálogo: Contamos con un amplio catálogo de licencias de software para todas las necesidades.
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-1/4 text-left text-3xl font-bold text-secondary-medium order-2">
+          2
+        </div>
+        <div class="w-3/4 p-4 rounded-sm shadow-gray-200 shadow-md bg-white order-1">
+          Asesoramiento personalizado: Nuestro equipo de expertos te ayudará a encontrar la solución perfecta para tu negocio.
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-1/4 text-right text-3xl font-bold text-secondary-medium">
+          3
+        </div>
+        <div class="w-3/4 p-4 rounded-sm shadow-gray-200 shadow-md bg-secondary-medium text-white">
+          Precios competitivos: Te ofrecemos los mejores precios del mercado.
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-1/4 text-left text-3xl font-bold text-secondary-medium order-2">
+          4
+        </div>
+        <div class="w-3/4 p-4 rounded-sm shadow-gray-200 shadow-md bg-white order-1">
+          Entrega rápida y segura: Recibe tus licencias de forma rápida y segura.
+        </div>
+      </div>
+    </div>
+  </span>
+</app-content01>
+<app-content01 [section]="'Servicios Adm. de Cómputo'" [image]="'bg-administrados'" class="w-full flex flex-col gap-8 p-8 py-16 md:flex-row text-coolgray-dark" id="infrastructure">
+  <span comment>
+    Entendemos que cada empresa tiene necesidades únicas. Por eso, te ofrecemos soluciones personalizadas que se adaptan a tu presupuesto y a tus objetivos.
+  </span>
+  <span detail>
+    <h2 class="text-3xl font-bold">
+      ¿Preocupado por tu infraestructura tecnológica?
+    </h2>
+    <p class="mt-4 mb-4">
+      Permítenos ayudarte. Nuestros servicios administrados te ofrecen la tranquilidad que necesitas para concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
+    <p class="mt-4 mb-4">
+      ¿Qué ofrecemos?
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <div class="flex flex-col gap-4 md:w-1/3">
+        <div class="text-center text-3xl font-bold text-secondary-light">
+          <span class="material-symbols-outlined text-6xl">
+            service_toolbox
+          </span>
+        </div>
+        <div class="">
+          Mantenimiento preventivo: Evita problemas antes de que ocurran.
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:w-1/3">
+        <div class="text-center text-3xl font-bold text-secondary-light">
+          <span class="material-symbols-outlined text-6xl">
+            support_agent
+          </span>
+        </div>
+        <div class="">
+          Soporte técnico 24/7: Contamos con un equipo de expertos siempre a tu disposición.
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:w-1/3">
+        <div class="text-center text-3xl font-bold text-secondary-light">
+          <span class="material-symbols-outlined text-6xl">
+            trending_up
+          </span>
+        </div>
+        <div class="">
+          Escalabilidad: Adaptamos nuestros servicios a medida que tu negocio crece.
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:w-1/3">
+        <div class="text-center text-3xl font-bold text-secondary-light">
+          <span class="material-symbols-outlined text-6xl">
+            local_police
+          </span>
+        </div>
+        <div class="">
+          Seguridad de la información: Protege tus datos de ciberataques.
+        </div>
+      </div>
+    </div>
+  </span>
+</app-content01>
+<div class="flex justify-center w-full p-8 py-16 bg-slate-200 text-coolgray-dark" id="cloud">
+  <div class="md:w-4/6 flex flex-col gap-8">
+    <div class="flex gap-2">
+      <div class="h-3 border-b-4 border-cosmo w-4"></div>
+      <div class="text-sm">Cómputo en la nube</div>
+    </div>
+    <h2 class="text-3xl font-bold">
+      ¿Estás listo para llevar tu negocio a la nube?
+    </h2>
+    <p>
+      Nuestro servicio de Cloud Computing te ofrece la flexibilidad, escalabilidad y seguridad que necesitas para crecer. Olvídate de la gestión de servidores y concéntrate en lo que realmente importa: tu negocio.
+    </p>
+    <p>
+      Beneficios del Cloud Computing:
+    </p>
+    <div class="flex gap-4 flex-wrap">
+      <div class="bg-secondary-medium p-4 rounded-sm md:w-1/4 w-full">
+        <div>
+          <span class="material-symbols-outlined text-6xl text-secondary-white">
+            house
+          </span>
+        </div>
+        <p class="text-white">
+          <span class="font-medium">Acceso desde cualquier lugar</span><br>
+          Trabaja desde cualquier dispositivo con conexión a internet.
+        </p>
+      </div>
+      <div class="bg-secondary-medium p-4 rounded-sm md:w-1/4 w-full">
+        <div>
+          <span class="material-symbols-outlined text-6xl text-secondary-white">
+            scale
+          </span>
+        </div>
+        <p class="text-white">
+          <span class="font-medium">Escalabilidad</span><br>
+          Adapta tus recursos a tus necesidades en tiempo real.
+        </p>
+      </div>
+      <div class="bg-secondary-medium p-4 rounded-sm md:w-1/4 w-full">
+        <div>
+          <span class="material-symbols-outlined text-6xl text-secondary-white">
+            visibility_lock
+          </span>
+        </div>
+        <p class="text-white">
+          <span class="font-medium">Seguridad</span><br>
+          Protege tus datos con las últimas tecnologías de seguridad.
+        </p>
+      </div>
+      <div class="bg-secondary-medium p-4 rounded-sm md:w-1/4 w-full">
+        <div>
+          <span class="material-symbols-outlined text-6xl text-secondary-white">
+            paid
+          </span>
+        </div>
+        <p class="text-white">
+          <span class="font-medium">Reducción de costos</span><br>
+          Evita grandes inversiones en infraestructura.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="px-8 py-16 flex gap-4" id="contact">
+  <div class="flex flex-col mb-8 md:w-1/2 order-1">
+    formulario
+  </div>
+  <div class="md:w-1/2 flex flex-col gap-4">
+    <h2 class="text-3xl font-bold">
+      Contáctanos
+    </h2>
+    <p>
+      Estamos aquí para ayudarte a alcanzar tus objetivos. Nuestro equipo de expertos te brindará la asesoría que necesitas para encontrar la solución perfecta para tu negocio
+    </p>
+    <ul>
+      <li class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-cosmo">
+          phone_iphone
+        </span>
+        <a href="tel:+525552722344">(+52) 55 5272 2344</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-cosmo">
+          mail
+        </span>
+        <a href="mailto:contacto@cosmobit.com.mx">
+          contacto&#64;cosmobit.com.mx
+        </a>
+      </li>
+      <li class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-cosmo">
+          location_on
+        </span>
+        Av. Tres 96, San Pedro de los Pinos, Benito Juárez, CDMX
+      </li>
+    </ul>
+  </div>
+</div>
+<footer class="bg-secondary-white text-center text-white font-medium p-4">
+  {{companyMe.name}} 2024
+</footer>
