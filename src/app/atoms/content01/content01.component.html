@@ -1,16 +1,22 @@
-<div class="flex flex-col mb-8 md:w-1/2 order-1">
-  <div class="h-72 w-10/12 bg-cover rounded-sm" [class]="image" >
+@if (image) {
+  <div class="flex flex-col mb-8 md:w-1/2 order-1">
+    @if (image) {
+      <div ngIf="image" class="h-72 w-10/12 bg-cover rounded-sm" [class]="image" >
+      </div>
+    }
+    <div class="w-11/12 ml-8 border-l-8 border-cosmo shadow-lg shad shadow-gray-200 bottom-12 relative rounded-sm bg-white p-4">
+      <span class="text-cosmo text-8xl">‟</span>
+      <p class="text-coolgray-dark"><ng-content select="[comment]" name="commentContainer"></ng-content></p>
+    </div>
   </div>
-  <div class="w-11/12 ml-8 border-l-8 border-cosmo shadow-lg shad shadow-gray-200 bottom-12 relative rounded-sm bg-white p-4">
-    <span class="text-cosmo text-8xl">‟</span>
-    <p class="text-coolgray-dark"><ng-content select="[comment]"></ng-content></p>
-  </div>
-</div>
+}
 <div class="md:w-1/2" [class]="order">
-  <div class="flex gap-2">
-    <div class="h-3 border-b-4 border-cosmo w-4"></div>
-    <div class="text-sm">{{section}}</div>
-  </div>
+  @if (section) {
+    <div class="flex gap-2">
+      <div class="h-3 border-b-4 border-cosmo w-4"></div>
+      <div class="text-sm">{{section}}</div>
+    </div>
+  }
   <div>
     <ng-content select="[detail]"></ng-content>
   </div>
