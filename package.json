@@ -1,5 +1,5 @@
 {
-  "name": "cosmobit",
+  "name": "neec-webpage",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cosmobit": "node dist/cosmobit/server/server.mjs"
+    "serve:ssr:neec-webpage": "node dist/neec-webpage/server/server.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,4 +1,7 @@
+import { title } from "process";
+
 export const environment = {
   production: false,
-  storage: '/src/assets/'
+  storage: '/src/assets/',
+  title: 'Neec-Webpage'
 };
